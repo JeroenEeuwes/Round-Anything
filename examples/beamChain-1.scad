@@ -13,7 +13,7 @@ function beamPoints(r1,r2,rStart=0,rEnd=0)=[
 linear_extrude(1){
 
   // chained lines by themselves
-  translate(){
+  translate([0,0,0]){
     radiiPoints=beamPoints(0,0);
     polygon(polyRound(beamChain(radiiPoints,offset1=0.02, offset2=-0.02),20));
   }
